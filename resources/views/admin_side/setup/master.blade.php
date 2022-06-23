@@ -14,12 +14,14 @@
     <link rel="stylesheet" href="{{ asset('public/assets/css/owl.carousel.min.css') }}">
     <link rel="stylesheet" href="{{ asset('public/assets/css/slicknav.min.css') }}">
     <!-- amchart css -->
-    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="https://www.amcharts.com/lib/3/plugins/export/export.css" type="text/css"
+        media="all" />
     <!-- others css -->
     <link rel="stylesheet" href="{{ asset('public/assets/css/typography.css') }}">
     <link rel="stylesheet" href="{{ asset('public/assets/css/default-css.css') }}">
     <link rel="stylesheet" href="{{ asset('public/assets/css/styles.css') }}">
     <link rel="stylesheet" href="{{ asset('public/assets/css/responsive.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('public/assets/css/toastr.css') }}">
     <!-- modernizr css -->
     <script src="{{ asset('public/assets/js/vendor/modernizr-2.8.3.min.js') }}"></script>
 </head>
@@ -34,8 +36,8 @@
 
 
 
-     <!-- page container area start -->
-     <div class="page-container">
+    <!-- page container area start -->
+    <div class="page-container">
         <!-- sidebar menu area start -->
         @include('admin_side.setup.sidebar')
         <!-- sidebar menu area end -->
@@ -95,6 +97,15 @@
     <!-- others plugins -->
     <script src="{{ asset('public/assets/js/plugins.js') }}"></script>
     <script src="{{ asset('public/assets/js/scripts.js') }}"></script>
+    <script src="{{ asset('public/assets/js/toastr.min.js') }}"></script>
+    <!-- CDN for Sweet Alert -->
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- messages -->
+    @include('admin_side.setup.message')
+    <!-- messages -->
+
+    @yield('scripts')
 </body>
 
 </html>

@@ -24,3 +24,7 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::get('roles',[RoleController::class, 'index'])->name('roles');
+Route::post('store-role',[RoleController::class, 'storeRole'])->name('store.role');
+Route::get('edit-role',[RoleController::class, 'editRole']);
+Route::post('update-role',[RoleController::class, 'updateRole'])->name('update.role');
+Route::get('delete-role',[RoleController::class, 'deleteRole']);
